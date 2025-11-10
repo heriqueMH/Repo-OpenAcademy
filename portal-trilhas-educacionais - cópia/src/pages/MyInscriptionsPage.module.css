@@ -1,0 +1,430 @@
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.header {
+  margin-bottom: 2rem;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #212121;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #616161;
+  font-size: 1rem;
+}
+
+/* Explore Catalog Button */
+.exploreCatalogBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  background: linear-gradient(135deg, #DC143C 0%, #B8112E 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.3);
+  white-space: nowrap;
+}
+
+.exploreCatalogBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 20, 60, 0.4);
+  background: linear-gradient(135deg, #B8112E 0%, #DC143C 100%);
+}
+
+.exploreCatalogBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(220, 20, 60, 0.3);
+}
+
+.exploreCatalogBtn svg {
+  font-size: 1.125rem;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #616161;
+  font-size: 1.125rem;
+}
+
+/* Messages */
+.success {
+  background: #D4EDDA;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #C3E6CB;
+  font-weight: 500;
+}
+
+.error {
+  background: #F8D7DA;
+  color: #721C24;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #FECACA;
+  font-weight: 500;
+}
+
+/* Empty State */
+.empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  color: #DC143C;
+  margin-bottom: 1rem;
+}
+
+.empty h3 {
+  color: #212121;
+  margin-bottom: 0.5rem;
+}
+
+.empty p {
+  color: #616161;
+}
+
+/* Inscriptions List */
+.inscriptionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Inscription Card */
+.inscriptionCard {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.inscriptionCard:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #F5F5F5;
+}
+
+.cardHeader h3 {
+  margin: 0 0 0.5rem 0;
+  color: #212121;
+  font-size: 1.25rem;
+}
+
+.turmaSubtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.375rem 0.875rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.status.active {
+  background: #D4EDDA;
+  color: #155724;
+}
+
+.status.inactive {
+  background: #F8D7DA;
+  color: #721C24;
+}
+
+/* Card Body */
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #616161;
+  font-weight: 500;
+}
+
+.value {
+  font-size: 1rem;
+  color: #212121;
+  font-weight: 600;
+}
+
+/* Progress Section */
+.progressSection {
+  background: #F5F5F5;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.progressHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: #212121;
+  font-weight: 600;
+}
+
+.progressBar {
+  width: 100%;
+  height: 12px;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #DC143C 0%, #FF6B6B 100%);
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+/* Progress width classes */
+.progress0 { width: 0%; }
+.progress5 { width: 5%; }
+.progress10 { width: 10%; }
+.progress15 { width: 15%; }
+.progress20 { width: 20%; }
+.progress25 { width: 25%; }
+.progress30 { width: 30%; }
+.progress35 { width: 35%; }
+.progress40 { width: 40%; }
+.progress45 { width: 45%; }
+.progress50 { width: 50%; }
+.progress55 { width: 55%; }
+.progress60 { width: 60%; }
+.progress65 { width: 65%; }
+.progress70 { width: 70%; }
+.progress75 { width: 75%; }
+.progress80 { width: 80%; }
+.progress85 { width: 85%; }
+.progress90 { width: 90%; }
+.progress95 { width: 95%; }
+.progress100 { width: 100%; }
+
+.progressPercent {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #DC143C;
+}
+
+/* Mackenzie Info */
+.mackenzieInfo {
+  background: #FFF5F5;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid #DC143C;
+}
+
+.mackenzieInfo h4 {
+  margin: 0 0 1rem 0;
+  color: #DC143C;
+  font-size: 1.125rem;
+}
+
+/* Responsive */
+@media (max-height: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .header {
+    margin-bottom: 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 1.75rem;
+  }
+
+  .section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* Certificate Section */
+.certificateSection {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #E5E7EB;
+  display: flex;
+  justify-content: center;
+}
+
+.certificateBtn {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.certificateBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45);
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.certificateBtn svg {
+  font-size: 1.3rem;
+}
+
+/* Trilha Details Section */
+.trilhaDetails {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: #F9FAFB;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #374151;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #E5E7EB;
+}
+
+.detailIcon {
+  font-size: 1.25rem;
+  color: #DC143C;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.detailItem > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.detailLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detailValue {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1F2937;
+  word-break: break-word;
+}

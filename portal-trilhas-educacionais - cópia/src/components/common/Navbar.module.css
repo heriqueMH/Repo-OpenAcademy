@@ -1,0 +1,282 @@
+/* Navbar Principal */
+.navbar {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0;
+  border-bottom: 3px solid #DC143C;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logoImg {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Links de Navegação */
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex: 1;
+  margin-left: 3rem;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.navLink:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 2px;
+  background: #FFD700;
+  transition: transform 0.3s;
+}
+
+.navLink:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Seção de Autenticação */
+.authSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btnSecondary,
+.btnPrimary {
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btnSecondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btnSecondary:hover {
+  background: white;
+  color: #DC143C;
+}
+
+.btnPrimary {
+  background: #DC143C;
+  color: white;
+}
+
+.btnPrimary:hover {
+  background: #B91230;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.4);
+}
+
+/* Menu do Usuário */
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.verificationAlert {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(220, 20, 60, 0.15);
+  color: #DC143C;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(220, 20, 60, 0.4);
+}
+
+.verificationAlert svg {
+  font-size: 1rem;
+}
+
+.userButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.userButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.avatar,
+.avatarPlaceholder {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatarPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFD700;
+  color: #8B0000;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.userName {
+  font-weight: 500;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  overflow: hidden;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.25rem;
+  text-decoration: none;
+  color: #333;
+  background: white;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdownItem:hover {
+  background: #f5f5f5;
+}
+
+.dropdownItem svg {
+  color: #8B0000;
+  font-size: 1.1rem;
+}
+
+.adminItem {
+  color: #DC143C;
+  font-weight: 600;
+}
+
+.adminItem:hover {
+  background: #FFF5F5;
+}
+
+.adminItem svg {
+  color: #DC143C;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .navLinks {
+    order: 3;
+    flex-basis: 100%;
+    margin-left: 0;
+    justify-content: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .verificationAlert span {
+    display: none;
+  }
+
+  .userName {
+    display: none;
+  }
+
+  .userButton {
+    padding: 0.5rem;
+  }
+}
